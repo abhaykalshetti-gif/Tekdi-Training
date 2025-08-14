@@ -1,0 +1,47 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion (FAQs)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="accordion-container">
+    <h1>Frequently Asked Questions</h1>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-question" aria-expanded="false" aria-controls="faq1">
+          How do I place an order?
+          <span class="icon">+</span>
+        </button>
+        <div class="accordion-answer" id="faq1" hidden>
+          <p>To place an order, simply browse our products, add the items you want to your cart, and proceed to checkout. You'll need to enter your shipping and payment information to complete the purchase.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-question" aria-expanded="false" aria-controls="faq2">
+          What is your return policy?
+          <span class="icon">+</span>
+        </button>
+        <div class="accordion-answer" id="faq2" hidden>
+          <p>We accept returns within 30 days of purchase. Items must be in their original condition with all tags attached. Please contact our customer service team to initiate a return.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-question" aria-expanded="false" aria-controls="faq3">
+          How can I track my order?
+          <span class="icon">+</span>
+        </button>
+        <div class="accordion-answer" id="faq3" hidden>
+          <p>Once your order has shipped, you will receive an email with a tracking number and a link to the carrier's website. You can use this to monitor the status of your delivery.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+ <script src="script.js"></script>
+</body>
+</html>
