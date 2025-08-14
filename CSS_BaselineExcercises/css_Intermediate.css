@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  line-height: 1.6;
+}
+section {
+  margin-bottom: 40px;
+}
+/* 2D Transform */
+.transform-2d {
+  display: inline-block;
+  padding: 20px;
+  background: lightcoral;
+  transition: transform 0.3s;
+}
+.transform-2d:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* 3D Transform */
+.transform-3d {
+  display: inline-block;
+  padding: 20px;
+  background: lightseagreen;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+.transform-3d:hover {
+  transform: rotateY(180deg);
+}
+
+/* Transitions */
+.transition-btn {
+  padding: 10px 20px;
+  background-color: steelblue;
+  color: white;
+  border: none;
+  transition: background-color 0.4s ease;
+}
+.transition-btn:hover {
+  background-color: darkblue;
+}
+
+/* Animations */
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.animated-box {
+  width: 200px;
+  height: 100px;
+  background-color: tomato;
+  animation: slidein 3s infinite alternate;
+}
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Image Styling & Filters */
+.styled-image {
+  border-radius: 10px;
+  filter: grayscale(50%) brightness(1.2);
+  transition: filter 0.3s;
+}
+.styled-image:hover {
+  filter: grayscale(0%) brightness(1);
+}
+
+/* Button Styling */
+.styled-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+.styled-button:hover {
+  background-color: #45a049;
+}
+

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Vista Restaurant - Fine Dining & Gourmet Menu</title>
+    <meta name="description" content="Experience exceptional fine dining at Bella Vista Restaurant. Discover our gourmet menu featuring premium ingredients, innovative cuisine, and award-winning dishes. Read customer reviews and make reservations.">
+    <meta name="author" content="Bella Vista Restaurant">
+    <meta name="keywords" content="fine dining, restaurant, gourmet menu, food reviews, premium cuisine, reservations">
+    
+    <meta property="og:title" content="Bella Vista Restaurant - Fine Dining & Gourmet Menu">
+    <meta property="og:description" content="Experience exceptional fine dining at Bella Vista Restaurant. Discover our gourmet menu featuring premium ingredients and innovative cuisine.">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="src/assets/hero-restaurant.jpg" alt="Fine dining restaurant interior">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+           <h1 class="hero-title">Swaad Mahal</h1>
+<p class="hero-subtitle">Where authentic Indian flavors meet royal hospitality</p>
+<p class="hero-description">
+    Experience the rich heritage of Indian cuisine with dishes inspired by the streets of Delhi, 
+    the spices of Kerala, and the royal kitchens of Rajasthan — all served with warmth and tradition.
+</p>
+
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('menu')">Explore Menu</button>
+                <button class="btn btn-outline" onclick="scrollToSection('reviews')">Read Reviews</button>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Menu</h2>
+                <p class="section-description">
+                    Discover our carefully curated selection of dishes, each crafted with passion and the finest ingredients
+                </p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">All Items</button>
+                <button class="filter-btn" data-category="appetizers">Appetizers</button>
+                <button class="filter-btn" data-category="mains">Main Courses</button>
+                <button class="filter-btn" data-category="desserts">Desserts</button>
+                <button class="filter-btn" data-category="beverages">Beverages</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Menu items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Guests Say</h2>
+                <p class="section-description">Experience the satisfaction of our valued customers</p>
+                <div class="rating-summary">
+                    <span class="rating-stars">★★★★★</span>
+                    <span class="rating-score">4.8</span>
+                    <span class="rating-count">(5 reviews)</span>
+                </div>
+            </div>
+
+            <div class="reviews-container">
+                <!-- Reviews Grid -->
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4 class="reviewer-name">Sarah M.</h4>
+                                <p class="review-date">January 15, 2024</p>
+                            </div>
+                            <div class="star-rating" data-rating="5">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-value">5.0</span>
+                            </div>
+                        </div>
+                        <p class="review-comment">Absolutely incredible dining experience! The Panner was cooked to perfection and the service was impeccable.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4 class="reviewer-name">James K.</h4>
+                                <p class="review-date">January 12, 2024</p>
+                            </div>
+                            <div class="star-rating" data-rating="5">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-value">5.0</span>
+                            </div>
+                        </div>
+                        <p class="review-comment">The Aloo Tikki was a perfect start to our meal. Amazing flavors and presentation!</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4 class="reviewer-name">Emily R.</h4>
+                                <p class="review-date">January 10, 2024</p>
+                            </div>
+                            <div class="star-rating" data-rating="4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-value">4.0</span>
+                            </div>
+                        </div>
+                        <p class="review-comment">Beautiful atmosphere and delicious food. The chocolate soufflé was divine!</p>
+                    </div>
+                </div>
+
+                <!-- Review Form -->
+                <div class="review-form-container">
+                    <div class="review-form-card">
+                        <h3 class="form-title">Share Your Experience</h3>
+                        <form id="reviewForm" class="review-form">
+                            <div class="form-group">
+                                <label class="form-label">Your Rating</label>
+                                <div class="interactive-rating" id="userRating">
+                                    <i class="far fa-star" data-rating="1"></i>
+                                    <i class="far fa-star" data-rating="2"></i>
+                                    <i class="far fa-star" data-rating="3"></i>
+                                    <i class="far fa-star" data-rating="4"></i>
+                                    <i class="far fa-star" data-rating="5"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reviewerName" class="form-label">Your Name</label>
+                                <input type="text" id="reviewerName" class="form-input" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reviewComment" class="form-label">Your Review</label>
+                                <textarea id="reviewComment" class="form-textarea" placeholder="Tell us about your dining experience..." rows="4" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">Submit Review</button>
+                        </form>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4 class="reviewer-name">Michael L.</h4>
+                                <p class="review-date">January 8, 2024</p>
+                            </div>
+                            <div class="star-rating" data-rating="5">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-value">5.0</span>
+                            </div>
+                        </div>
+                        <p class="review-comment">Best restaurant experience I've had in years. Every dish was a masterpiece.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4 class="reviewer-name">Anna P.</h4>
+                                <p class="review-date">January 5, 2024</p>
+                            </div>
+                            <div class="star-rating" data-rating="4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-value">4.0</span>
+                            </div>
+                        </div>
+                        <p class="review-comment">The sea bass was excellent and the cocktails were perfectly crafted. Will definitely return!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+ <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Swaad Mahal</h3>
+                <p class="footer-text">Where authentic Indian flavors meet royal hospitality.</p>
+                <p class="footer-copyright">© 2024 Swaad Mahal Restaurant. All rights reserved.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-heading">Contact</h4>
+                <div class="footer-info">
+                    <p>21 Spice Bazaar Road</p>
+                    <p>Chowk Area, Jaipur, RJ 302001</p>
+                    <p>Phone: +91 98765 43210</p>
+                    <p>Email: contact@swaadmahal.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-heading">Hours</h4>
+                <div class="footer-info">
+                    <p>Monday - Thursday: 12:00 PM - 10:30 PM</p>
+                    <p>Friday - Saturday: 12:00 PM - 11:30 PM</p>
+                    <p>Sunday: 12:00 PM - 10:00 PM</p>
+                    <p class="footer-note">Reservations recommended</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <div class="toast-content">
+            <i class="toast-icon"></i>
+            <div class="toast-message">
+                <div class="toast-title"></div>
+                <div class="toast-description"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

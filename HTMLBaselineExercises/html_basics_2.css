@@ -1,0 +1,38 @@
+/* === HTML Colors === */
+.color-named { color: red; /* Named color */ }
+.color-hex { color: #00FF00; /* Hexadecimal code */ }
+.color-rgb { color: rgb(0, 0, 255); /* RGB color */ }
+.color-hsl { color: hsl(240, 100%, 50%); /* HSL color */ }
+
+/* === Images === */
+.responsive { max-width: 100%; height: auto; /* Make images responsive */ }
+
+/* === Tables === */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Merge borders */
+}
+th, td {
+  border: 1px solid #333;
+  padding: 8px; /* Add space inside cells */
+}
+th {
+  background-color: #f2f2f2; /* Highlight headers */
+}
+
+/* === Lists === */
+ul, ol {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+/* === Block vs Inline, Classes, IDs === */
+.box {
+  border: 2px dashed blue;
+  padding: 10px;
+  margin: 10px 0;
+}
+#inline-span {
+  color: green;
+  font-style: italic;
+}

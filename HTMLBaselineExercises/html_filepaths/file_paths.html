@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Path Demo</title>
+  <!-- Subfolder path -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Main Page (index.html)</h1>
+
+  <!-- Same folder (no file here, just for example) -->
+  <p>Image from same folder (will not show unless placed here):</p>
+  <img src="logo.png" alt="Logo from same folder" width="150">
+
+  <!-- Subfolder -->
+  <p>Image from subfolder (correct path):</p>
+  <img src="./images/image.png" alt="Logo from subfolder" width="150">
+
+  <!-- JavaScript file in subfolder -->
+  <script src="js/app.js"></script>
+
+  <!-- External file path -->
+  <p>External image from W3Schools:</p>
+  <img src="https://www.w3schools.com/images/w3schools_green.jpg" width="150">
+
+  <!-- Link to about.html in subfolder -->
+  <p><a href="about/about.html">Go to About Page (Relative)</a></p>
+</body>
+</html>

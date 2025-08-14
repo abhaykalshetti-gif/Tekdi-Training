@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Input Attributes & Form Attribute Example</title></head>
+<body>
+  <h2>Form Input Attributes</h2>
+  <form>
+    Username (required): <input type="text" required><br><br>
+    Readonly Email: <input type="email" value="user@example.com" readonly><br><br>
+    Age (18-60): <input type="number" min="18" max="60"><br><br>
+    Password (max 8 chars): <input type="password" maxlength="8"><br><br>
+    Zip Code (pattern): <input type="text" pattern="[0-9]{6}" placeholder="6-digit ZIP"><br><br>
+    <input type="submit">
+  </form>
+
+   <h2>Input Form Attribute Example</h2>
+
+  <form id="userForm" action="/register" method="post">
+    <input type="text" name="username" form="userForm" placeholder="Username">
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>
