@@ -9,18 +9,17 @@ const passwordError = document.getElementById('passwordError');
 const successMessage = document.getElementById('successMessage');
 
 form.addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the form from submitting by default
-  resetErrors();
+  event.preventDefault(); 
+    resetErrors();
   
   let isValid = true;
 
-  // Validate Name
+  
   if (nameInput.value.trim() === '') {
     nameError.textContent = 'Name is required.';
     isValid = false;
   }
 
-  // Validate Email
   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
   if (emailInput.value.trim() === '') {
     emailError.textContent = 'Email is required.';
@@ -30,7 +29,6 @@ form.addEventListener('submit', function(event) {
     isValid = false;
   }
 
-  // Validate Password
   if (passwordInput.value.trim() === '') {
     passwordError.textContent = 'Password is required.';
     isValid = false;
@@ -42,7 +40,7 @@ form.addEventListener('submit', function(event) {
   if (isValid) {
     successMessage.textContent = 'Form submitted successfully!';
     successMessage.style.display = 'block';
-    form.reset(); // Clear the form fields
+    form.reset(); 
   } else {
     successMessage.style.display = 'none';
   }
