@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive DOM Basics</title>
+    <!-- Use Tailwind CSS for a responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <main class="container mx-auto space-y-8">
+        <h1 class="text-3xl font-bold text-center text-white">Comprehensive DOM Basics</h1>
+
+        <!-- DOM Documents & Elements -->
+        <section class="card p-6">
+            <h2 class="text-2xl font-semibold mb-4 text-center">DOM Documents & Elements</h2>
+            <div id="demo-element-container" class="space-y-4">
+                <p id="first-paragraph" class="text-gray-300">This is the first paragraph. I will change its text.</p>
+                <p class="text-gray-300">This is the second paragraph.</p>
+                <div class="flex flex-col items-center space-y-4">
+                    <button id="change-text-button" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                        Change Text
+                    </button>
+                    <button id="add-element-button" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                        Add New Element
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOM HTML -->
+        <section class="card p-6">
+            <h2 class="text-2xl font-semibold mb-4 text-center">DOM HTML & Attributes</h2>
+            <div id="dom-html-demo" class="flex flex-col items-center space-y-4">
+                <p id="html-paragraph" class="text-gray-300 text-center">Click the button to change the <span class="text-red-400">HTML content</span> of this paragraph!</p>
+                <button id="change-html-button" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                    Change Inner HTML
+                </button>
+            </div>
+        </section>
+
+        <!-- DOM FORMS -->
+        <section class="card p-6">
+            <h2 class="text-2xl font-semibold mb-4 text-center">DOM FORMS</h2>
+            <form id="contact-form" class="space-y-4 text-gray-800">
+                <div class="flex flex-col">
+                    <label for="username" class="text-white mb-2">Your Name:</label>
+                    <input type="text" id="username" name="username" class="rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your name">
+                </div>
+                <button type="submit" class="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                    Submit Form
+                </button>
+            </form>
+            <p id="form-message" class="mt-4 text-center font-semibold text-white"></p>
+        </section>
+
+        <!-- DOM CSS -->
+        <section class="card p-6">
+            <h2 class="text-2xl font-semibold mb-4 text-center">DOM CSS</h2>
+            <p id="css-paragraph" class="text-center">Click the button to change the style of this text!</p>
+            <div class="flex justify-center mt-4">
+                <button id="change-style-button" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                    Change Style
+                </button>
+            </div>
+        </section>
+
+        <!-- DOM Events & Event Listener -->
+        <section class="card p-6">
+            <h2 class="text-2xl font-semibold mb-4 text-center">DOM Events & Event Listener</h2>
+            <div class="flex flex-col items-center space-y-4">
+                <button id="event-button" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                    Click Me
+                </button>
+                <p id="event-message" class="text-center font-semibold text-white">I will change when you click the button!</p>
+            </div>
+        </section>
+
+        <!-- DOM Navigation -->
+        <section class="card p-6">
+            <h2 class="text-2xl font-semibold mb-4 text-center">DOM Navigation</h2>
+            <div id="parent-container" class="border border-gray-600 p-4 rounded-lg space-y-2">
+                <p id="child1">Child Element 1</p>
+                <p id="child2">Child Element 2</p>
+            </div>
+            <p id="nav-message" class="mt-4 text-center font-semibold text-white"></p>
+            <div class="flex justify-center mt-4">
+                <button id="nav-button" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                    Navigate
+                </button>
+            </div>
+        </section>
+
+        <!-- DOM Collections and NodeLists -->
+        <section class="card p-6">
+            <h2 class="text-2xl font-semibold mb-4 text-center">DOM Collections and NodeLists</h2>
+            <div class="space-y-2 text-center" id="list-container">
+                <p class="item-list">Item 1</p>
+                <p class="item-list">Item 2</p>
+                <p class="item-list">Item 3</p>
+            </div>
+            <p id="list-message" class="mt-4 text-center font-semibold text-white"></p>
+            <div class="flex justify-center mt-4">
+                <button id="highlight-button" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                    Highlight All
+                </button>
+            </div>
+        </section>
+        
+        <!-- More DOM Examples: To-Do List -->
+        <section class="card p-6">
+            <h2 class="text-2xl font-semibold mb-4 text-center">To-Do List Component (Advanced DOM)</h2>
+            <div class="space-y-4">
+                <div class="flex space-x-2">
+                    <input type="text" id="todo-input" class="flex-1 rounded-lg p-2 text-gray-800" placeholder="Add a new task...">
+                    <button id="add-todo-button" class="bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-bold py-2 px-4 rounded-lg transition-colors">Add</button>
+                </div>
+                <ul id="todo-list" class="space-y-2">
+                    <!-- To-do items will be added here by JavaScript -->
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="./script.js"> </script>
+</body>
+</html>
